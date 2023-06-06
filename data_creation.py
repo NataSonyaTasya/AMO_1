@@ -92,7 +92,7 @@ for i in range(4):
     train=df[:201]
     test=df[201:]
     train.to_csv('train/train{}.csv'.format(i+a), index=False)
-    test.to_csv('test/test{}'.format(i+a), index=False)
+    test.to_csv('test/test{}.csv'.format(i+a), index=False)
 
 test_df.to_csv('submission.csv', columns=['id', 'prognosis'], index=False)
 d(log_dir="{}/{}".format(log_dir, time.time()))
