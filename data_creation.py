@@ -86,7 +86,7 @@ for i in range(4):
     y, y_true, x = dataset(a = [1,2,-2], b = -1,
                        f = None,  N = 250,
                        x_max =50, random_x = True,
-                       noise_power = np.random.random(1),
+                       noise_power = np.random.randint(0,5000,(1)),
                        seed = 42)
     df=pd.DataFrame({"X": x, "Y":y})
     train=df[:201]
