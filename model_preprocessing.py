@@ -28,6 +28,6 @@ def scale(train_file,test_file):
     return train_df, test_df
 
 for i in range(lenfile('train')):
-        train_df, test_df=scale('train/train{}.csv'.format(i),'test/test{}.cvs'.format(i))  
+        train_df, test_df=scale('train/train{}.csv'.format(i),'test/test{}.csv'.format(i))  
         train_df.to_csv('train/train{}.csv'.format(i), index=False)
         test_df.to_csv('test/test{}.csv'.format(i), index=False)
