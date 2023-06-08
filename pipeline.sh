@@ -1,5 +1,6 @@
 #!/bin/bash
-data_creation.py
-model_preprocessing.py
-model_preparation.py
-model_testing.py
+python data_creation.py
+python model_preprocessing.py
+python model_preparation.py
+python model_testing.py
+exit
