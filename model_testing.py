@@ -6,6 +6,7 @@ import glob
 from sklearn.linear_model import LinearRegression
 from sklearn.preprocessing import PolynomialFeatures  # Класс преобразователь
 from sklearn import metrics
+import pickle
 #загрузка модели
 load_model = pickle.load(open(filename, 'rb'))
 df = pd.concat(map(pd.read_csv, glob.glob(os.path.join("test", "test*.csv"))), ignore_index= True)#загрузка всех тестовых данных в одну таблицу
