@@ -25,10 +25,9 @@ def scale(train_file,test_file):
     X_test=scale.transform(test_df["X"].to_numpy().reshape(-1, 1))
     train_df['X_new']=X_train
     test_df['X_new']=X_test
-    train_df.to_csv('train/train{}.csv'.format(i+a), index=False)
     return train_df, test_df
 
 for i in range(lenfile('train')):
-        train_df, test_df=scale('train/train{}.csv'.format(i),'test/test{}'.format(i))  
+        train_df, test_df=scale('train/train{}.csv'.format(i),'test/test{}.cvs'.format(i))  
         train_df.to_csv('train/train{}.csv'.format(i), index=False)
         test_df.to_csv('test/test{}.csv'.format(i), index=False)
