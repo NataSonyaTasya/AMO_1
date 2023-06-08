@@ -8,6 +8,7 @@ from sklearn.preprocessing import PolynomialFeatures  # Класс преобр�
 from sklearn import metrics
 import pickle
 #загрузка модели
+filename = 'poly_linear_model.sav'
 load_model = pickle.load(open(filename, 'rb'))
 df = pd.concat(map(pd.read_csv, glob.glob(os.path.join("test", "test*.csv"))), ignore_index= True)#загрузка всех тестовых данных в одну таблицу
 X_test=df['X_new']
